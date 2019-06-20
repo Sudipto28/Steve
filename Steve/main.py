@@ -5,7 +5,7 @@ import spacy
 from googlesearch import search
 from datetime import datetime
 
-wolframalphaclient = wolframalpha.Client('2JPLYG-XHH25L8W82')
+wolframalphaclient = wolframalpha.Client('API Key')
 
 
 def getweather(city):
@@ -18,7 +18,7 @@ def getweather(city):
     else:
         city = ipdata['city']
 
-    authkey = '2a3b776ec8861e6fc9a3f05241694317'
+    authkey = 'APIKey'
     weatherurl = 'http://api.openweathermap.org/data/2.5/weather?appid=' + authkey + '&q=' + city
     weatherinfo = requests.get(weatherurl)
     weatherdata = weatherinfo.json()
